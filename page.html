@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Website</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            direction: ltr;
+            background-color: #f4f4f4;
+            transition: background-color 0.5s;
+        }
+
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            border: 2px solid #007BFF;
+            overflow: hidden;
+            transition: border-color 0.5s;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #007BFF;
+            transition: background 0.5s, padding 0.3s;
+        }
+
+        nav {
+            float: right;
+            width: 20%;
+            background: #ffdab9;
+            padding: 1rem;
+            margin: 1rem;
+            border: 2px solid #007BFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background 0.5s;
+        }
+
+        nav:hover {
+            transform: scale(1.05);
+            background: #ffcc99;
+        }
+
+        aside {
+            float: left;
+            width: 20%;
+            background: #ffdab9;
+            padding: 1rem;
+            margin: 1rem;
+            border: 2px solid #007BFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, background 0.5s;
+        }
+
+        aside:hover {
+            transform: scale(1.05);
+            background: #ffcc99;
+        }
+
+        section {
+            float: left;
+            width: 55%;
+            background: #ffffff;
+            padding: 1rem;
+            margin: 1rem;
+            border: 2px solid #007BFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            min-height: 100px;
+            transition: transform 0.3s, background 0.5s;
+        }
+
+        section:hover {
+            transform: translateY(-5px);
+            background: #f9f9f9;
+        }
+
+        footer {
+            clear: both;
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 1rem;
+            border-top: 2px solid #007BFF;
+            transition: background 0.5s;
+        }
+
+        footer:hover {
+            background: #444;
+        }
+
+        @media (max-width: 600px) {
+
+            nav,
+            aside,
+            section {
+                width: 90%;
+                float: none;
+                margin: 1rem auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h2>Header</h2>
+        </header>
+        <nav>Navigation</nav>
+        <aside>Sidebar</aside>
+        <section>Content 1</section>
+        <section>Content 2</section>
+        <section>Content 3</section>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>

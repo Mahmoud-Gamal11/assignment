@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="drop.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="drop-zone" id="dropZone" ondragover="event.preventDefault()" ondrop="handleDrop(event)">
+            <div class="drop-text">Drop Any Image Here</div>
+        </div>
+        <div class="success-message" id="successMessage">Image dropped successfully!</div>
+        <div class="notification" id="notification">Only one image can be dropped!</div>
+        <div class="image-container">
+            <img src="/images/photo1.jpg" alt="Blue Image" class="draggable-image" draggable="true" data-id="blue">
+            <img src="/images/photo2.jpg" alt="Red Image" class="draggable-image" draggable="true" data-id="red">
+            <img src="/images/photo3.jpg" alt="Green Image" class="draggable-image" draggable="true" data-id="green">
+        </div>
+    </div>
+
+</body>
+<script src="drop.js"></script>
+
+</html>

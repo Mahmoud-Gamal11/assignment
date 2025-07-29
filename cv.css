@@ -1,0 +1,77 @@
+body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #1e272e, #2c3e50);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            color: #ecf0f1;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .skill-item {
+            margin: 20px 0;
+            color: #ecf0f1;
+            font-size: 1.5em;
+            text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+        }
+        .skill-bar {
+            width: 300px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            display: inline-block;
+            position: relative;
+            overflow: hidden;
+            margin-right: 10px;
+        }
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #00ffcc, #00cc99);
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            animation: fillBar 2s ease-in-out forwards;
+        }
+        .skill-item:nth-child(1) .skill-progress { animation-delay: 0.2s; }
+        .skill-item:nth-child(2) .skill-progress { animation-delay: 0.4s; width: 80%; }
+        .skill-item:nth-child(3) .skill-progress { animation-delay: 0.6s; }
+        @keyframes fillBar {
+            0% { width: 0; }
+            100% { width: 30%; }
+        }
+        .skill-item:nth-child(2) .skill-progress {
+            animation: fillBar80 2s ease-in-out forwards;
+        }
+        @keyframes fillBar80 {
+            0% { width: 0; }
+            100% { width: 80%; }
+        }
+        .skill-item:nth-child(3) .skill-progress {
+            animation: fillBar40 2s ease-in-out forwards;
+        }
+        @keyframes fillBar40 {
+            0% { width: 0; }
+            100% { width: 40%; }
+        }
+        @media (max-width: 480px) {
+            .skill-bar {
+                width: 200px;
+            }
+        }

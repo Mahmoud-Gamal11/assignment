@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #1e1e2f, #2a2a4e);
+    font-family: 'Arial', sans-serif;
+    overflow: hidden;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.drop-zone {
+    width: 500px;
+    height: 500px;
+    background: rgba(20, 20, 40, 0.9);
+    border: 3px solid transparent;
+    border-radius: 30px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+
+}
+
+.drop-zone::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(0, 255, 255, 0.1), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.drop-zone.dragover::before {
+    opacity: 1;
+}
+
+.drop-zone.dragover {
+    border-color: #00ffff;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.7);
+    transform: scale(1.02);
+}
+
+.drop-zone img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.drop-text {
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    opacity: 0.7;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+.image-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.draggable-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 30px;
+    cursor: move;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.draggable-image:hover {
+    transform: scale(1.15);
+    box-shadow: 0 10px 20px rgba(0, 255, 255, 0.5);
+}
+
+.draggable-image.dragging {
+    opacity: 0.5;
+    transform: scale(0.95);
+}
+
+.success-message {
+    color: #00ff88;
+    font-size: 18px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.success-message.show {
+    opacity: 1;
+}
+
+.notification {
+    color: #ff4d4d;
+    font-size: 18px;
+    margin-top: 10px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.notification.show {
+    opacity: 1;
+}
